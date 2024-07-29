@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block left_side %}
+<div class="team-section">
+    <h1 style="text-align: center;">Our Team</h1>
+    <p style="text-align: justify;">The development of the Follow-me Unmanned Aerial Vehicle System (FUAVS) is driven by a dynamic and skilled team committed to innovation and excellence. </p>
+    <p style="text-align: justify;">
+        Eman Fatima, our Project Manager, brings unparalleled expertise in project coordination and strategic planning, ensuring that every phase of the project is meticulously managed and executed. 
+        Ammara Sheikh, our Lead Developer, spearheads the technical development with her profound knowledge in software engineering and cutting-edge technologies, translating complex requirements into functional and reliable code. 
+        Ahmed Asjal, our UX Designer, crafts intuitive and user-friendly interfaces, enhancing the overall user experience and making our application accessible to a broad audience.
+        Together, this talented team collaborates seamlessly to bring FUAVS to life, each member contributing their unique skills
+        and perspectives to achieve our collective goals.
+    </p>
+</div>
+{% endblock %}
+
+{% block right_side %}
+<div class="team-cards">
+    <div class="team-card team-card-1">
+        <div class="team-card-inner">
+            <img src="{{ url_for('static', filename='images/Amara.jpg') }}" alt="Team Member 2">
+            <div class="team-card-overlay">
+                <h2>Amara Sheikh</h2>
+                <p>Lead Developer</p>
+            </div>
+        </div>
+    </div>
+    <div class="team-card team-card-2">
+        <div class="team-card-inner">
+            <img src="{{ url_for('static', filename='images/Eman.jpg') }}" alt="Team Member 1">
+            <div class="team-card-overlay">
+                <h2>Eman Fatima</h2>
+                <p>Project Manager</p>
+            </div>
+        </div>
+    </div>
+    <div class="team-card team-card-3">
+        <div class="team-card-inner">
+            <img src="{{ url_for('static', filename='images/Asjal.jpeg') }}" alt="Team Member 3">
+            <div class="team-card-overlay">
+                <h2>Ahmed Asjal</h2>
+                <p>UX Designer</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

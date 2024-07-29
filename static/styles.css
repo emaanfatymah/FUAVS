@@ -1,0 +1,546 @@
+body {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+}
+
+/* General styling for navigation links */
+.nav-link {
+    font-size: 14px;
+    padding: 5px 10px;
+    transition: color 0.3s, font-size 0.3s, transform 0.3s;
+    /* Smooth color, size, and transform transition on hover */
+}
+
+/* Hover effect for navigation links */
+.nav-link:hover {
+    color: #f0f0f0 !important;
+    font-size: 16px;
+    /* Increase font size on hover */
+    transform: scale(1.1);
+    /* Slightly enlarge the link on hover */
+}
+
+/* Styling for the active link */
+.nav-link.active {
+    color: #007bff !important;
+    /* Change color of the active link */
+    font-size: 16px;
+    /* Keep font size increased for the active link */
+    font-weight: bold;
+    /* Make the active link bold */
+}
+
+/* Icon image styling */
+.icon-img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Hero body styling */
+.hero-body {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+/* Left and right side padding */
+.left-side,
+.right-side {
+    padding: 20px;
+    padding-top: 0%;
+}
+
+
+.navbar {
+    background-color: #1c1c1c;
+}
+
+.navbar-brand {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+
+.right-side #drone-animation {
+    width: 100%;
+    height: 800px;
+}
+/* Keyframes for sliding in text from the right */
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Keyframes for moving cards from the origin to their final positions */
+@keyframes moveToPosition1 {
+    0% {
+        transform: translate(-200px, -130px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes moveToPosition2 {
+    0% {
+        transform: translate(130px, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes moveToPosition3 {
+    0% {
+        transform: translate(-200px, 130px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.team-section {
+    margin-bottom: 20px;
+    position: relative;
+    padding-top: 0%;
+    animation: slideInFromRight 1s ease-out;
+}
+
+.team-cards {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* General styles for team cards */
+.team-card {
+    width: 210px;
+    aspect-ratio: 4 / 5;
+    margin: 20px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Specific initial positions for animation */
+.team-card-1 {
+    top: 130px;
+    left: 200px;
+    animation: moveToPosition1 1s ease-out forwards;
+}
+
+.team-card-2 {
+    top: 0;
+    left: -130px;
+    animation: moveToPosition2 1s ease-out forwards;
+}
+
+.team-card-3 {
+    bottom: 130px;
+    left: 200px;
+    animation: moveToPosition3 1s ease-out forwards;
+}
+
+.team-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.team-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+.team-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.team-card:hover .team-card img {
+    opacity: 0.3;
+}
+
+.team-card:hover .team-card-overlay {
+    opacity: 1;
+}
+
+.team-card-overlay h2,
+.team-card-overlay p {
+    margin: 5px 0;
+}
+
+/* Additional styles for login page */
+.background-image {
+    opacity: 1 !important;
+}
+
+.box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.form-check-label,
+.form-text {
+    color: #ffffff;
+}
+
+
+/* Additional CSS for profile.html */
+/* styles.css */
+/* Additional CSS for profile.html */
+
+.btn-success {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-success:hover, .btn-success:focus, .btn-success:active {
+    background-color: #0056b3; /* Darker shade for hover/active state */
+    border-color: #0056b3;
+}
+
+
+.welcome-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.module-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease;
+    width: 15%;
+    margin: 0 10px;
+}
+
+.module-card:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.3);
+    z-index: 1;
+}
+
+.module-card .card-body {
+    padding: 15px;
+}
+
+.module-card .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.module-card .card-text {
+    color: #fff;
+}
+
+.module-card .description {
+    display: none;
+    color: #fff;
+}
+
+.module-card .continue-icon {
+    display: none;
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+}
+
+.image-container {
+    width: 100%;
+    padding-top: 125%;
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.image-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: auto;
+    transform: translate(-50%, -50%);
+}
+
+.image-container img.landscape {
+    width: 100%;
+    height: auto;
+}
+
+.description,
+.continue-icon {
+    display: none;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-left {
+    animation: slideInLeft 1s forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 1s forwards;
+}
+
+
+
+/* Custom button styling */
+.button {
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Specific styles for different button states */
+.button.is-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.button.is-success {
+    background-color: #007bff;
+    color: white;
+}
+
+.button.is-warning {
+    background-color: #007bff;
+    color: white;
+}
+
+.button.is-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Hover effect for buttons */
+.button:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Distinct styling for the "Stop Face Tracking" button */
+#stopTrackingBtn {
+    font-size: 24px;
+    padding: 15px 30px;
+    background-color: #dc3545;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Hover effect for the "Stop Face Tracking" button */
+#stopTrackingBtn:hover {
+    transform: scale(1.15);
+    opacity: 0.9;
+}
+
+/* Styling for the video feed container */
+#droneVideo,
+#bodyVideo {
+    border: 5px solid #333;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Centering the button group below the video */
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.button.is-info {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Specific styling for the "Back" button */
+#backBtn {
+    /* font-size: 18px; */
+    /* padding: 5px 20px; */
+    /* Adjust horizontal padding */
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    width: 100px;
+    height: 70px;
+    margin-top: 20px;
+    /* transition: background-color 0.3s, transform 0.3s; */
+    /* Ensure height adjusts to fit content */
+    /* Ensure line height is normal */
+}
+
+
+/* Hover effect for the "Back" button */
+#backBtn:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.image-hover {
+    transition: transform 0.3s;
+}
+
+.image-hover:hover {
+    transform: scale(1.05);
+}
+
+.card {
+    width: 18rem;
+    overflow: hidden;
+    /* Ensures the image stays within the card */
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+    /* Ensures the image takes the full width of the card */
+}
+
+.image-card {
+    margin-bottom: 1.5rem;
+    /* Adds some spacing between cards */
+}
+
+.card-video-top {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+    /* Ensures the video takes the full width of the card */
+}
+
+.video-card {
+    margin-bottom: 1.5rem;
+    /* Adds some spacing between cards */
+}
+
+
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+#splash-animation-container {
+    width: 200px;
+    height: 200px;
+}
+
+#splash-text {
+    font-size: 2em;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+/* Keyframes for sliding in text and images from left and right */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Apply animation to text and images */
+.col-md-6.text-center img {
+    animation: slideInFromRight 1s ease-out;
+}
+
+.col-md-6.mt-5.pt-5 {
+    animation: slideInFromLeft 1s ease-out;
+}
